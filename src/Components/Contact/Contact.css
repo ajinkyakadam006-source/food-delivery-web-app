@@ -1,0 +1,169 @@
+:root {
+  --primary: #ff5200;
+  --primary-hover: #e04800;
+  --bg-gradient: linear-gradient(135deg, #fff5f0 0%, #ffe3d5 100%);
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --text-main: #1c1c1c;
+  --text-muted: #686b78;
+  --shadow-glow: 0 20px 40px rgba(255, 82, 0, 0.15);
+  --radius: 16px;
+}
+
+/* Background & Ambient Glow */
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.contact::before,
+.contact::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact::before {
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 82, 0, 0.22);
+  top: 10%;
+  left: 15%;
+}
+
+.contact::after {
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 184, 0, 0.25);
+  bottom: 10%;
+  right: 15%;
+}
+
+/* Glassmorphism Card Container */
+.contact-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-glow);
+  animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.contact-container h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.5px;
+}
+
+.contact-subtext {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Form & Input Interactions */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-main);
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #93959f;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(255, 82, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Interactive CTA Button */
+.contact-form button {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 82, 0, 0.28);
+  transition: all 0.25s ease;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 12px 24px rgba(255, 82, 0, 0.38);
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(255, 82, 0, 0.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 2rem 1.5rem;
+  }
+  .contact-container h1 {
+    font-size: 1.8rem;
+  }
+}

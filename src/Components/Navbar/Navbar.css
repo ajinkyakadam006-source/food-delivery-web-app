@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    width: 100%;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.foodLogo {
+    font-size: 35px;
+    animation: bounce 2s infinite;
+}
+
+.logoName {
+    white-space: nowrap;
+}
+
+.listItems {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.listItems li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.listItems li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.listItems li a:hover::after {
+    width: 100%;
+}
+
+.listItems li a:hover {
+    transform: translateY(-2px);
+}
+
+/* CART BUTTON */
+
+.cartBtn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cartBtn:hover {
+    transform: scale(1.1);
+}
+
+.cartBtn svg {
+    font-size: 28px;
+    color: black;
+}
+
+.cartBtn span {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* LOGO ANIMATION */
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .foodLogo {
+        font-size: 28px;
+    }
+
+    .listItems {
+        gap: 18px;
+    }
+
+    .listItems li a {
+        font-size: 16px;
+    }
+
+    .cartBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cartBtn svg {
+        font-size: 25px;
+    }
+
+    .cartBtn span {
+        font-size: 10px;
+        top: -5px;
+        right: -5px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+        gap: 5px;
+    }
+
+    .foodLogo {
+        font-size: 24px;
+    }
+
+    .listItems {
+        gap: 12px;
+    }
+
+    .listItems li a {
+        font-size: 14px;
+    }
+
+    .cartBtn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cartBtn svg {
+        font-size: 22px;
+    }
+
+    .cartBtn span {
+        font-size: 9px;
+        top: -4px;
+        right: -4px;
+    }
+}
