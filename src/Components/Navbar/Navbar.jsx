@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { TiShoppingCart } from "react-icons/ti"
-import CartSideBar from '../CartSideBar/CartSideBar'
+import CartSideBar from '../CartSidebar/CartSidebar';
 import './Navbar.css'
 
 const Navbar = ({ cart, setCart }) => {
