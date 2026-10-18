@@ -5,7 +5,7 @@ import Burger from '../../assests/Burger.jpg';
 import ButterChicken from '../../assests/Butter-Chicken.webp';
 import ChickenPizza from '../../assests/Chicken Pizza.jpg';
 import ChickenBiryani from '../../assests/Chicken-Biryani.jpg';
-import ChickenFriedRice from '../../assests/Chicken-Fried-Rice.jpg';
+import ChickenFriedRice from '../../assests/Chicken-fried-rice.jpg';
 import ChilliChicken from '../../assests/chilli-chicken.jpg';
 import ChocolateIcecream from '../../assests/Chocolate Icecream.jpg';
 import Dosa from '../../assests/Dosa.jpg';
@@ -17,7 +17,7 @@ import PavBhaji from '../../assests/Pav-Bhaji.jpg';
 import Pizza from '../../assests/Pizza.jpg';
 import PunjabiSamosa from '../../assests/Punjabi-samosa.jpg';
 import Shawarma from '../../assests/Shawarma.jpg';
-import VadaPav from '../../assests/Vada-Pav.jpg';
+import VadaPav from '../../assests/Vada-pav.jpg';
 import VegBiryani from '../../assests/Veg-Biryani.jpg';
 import VegManchurian from '../../assests/veg-manchurian.jpg';
 
